@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desmatamento e Suas Consequências</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+  <!-- Navbar -->
+  <nav class="bg-green-800 text-white p-4 sticky top-0 shadow-md">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Desmatamento</h1>
+      <ul class="flex space-x-4">
+        <li><a href="#home" class="hover:underline">Início</a></li>
+        <li><a href="#consequencias" class="hover:underline">Consequências</a></li>
+        <li><a href="#video" class="hover:underline">Vídeo</a></li>
+        <li><a href="#contato" class="hover:underline">Contato</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Seção Inicial -->
+  <section id="home" class="bg-cover bg-center h-screen text-white flex items-center" style="background-image: url('https://images.unsplash.com/photo-1502082553048-f009c37129b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80')">
+    <div class="container mx-auto text-center bg-black bg-opacity-50 p-8 rounded">
+      <h2 class="text-4xl md:text-5xl font-bold mb-4">O Impacto do Desmatamento</h2>
+      <p class="text-lg md:text-xl mb-6">Entenda como a destruição das florestas afeta o planeta e o que podemos fazer para mudar.</p>
+      <a href="#consequencias" class="bg-green-600 text-white px-6 py-3 rounded hover:bg-green-700">Saiba Mais</a>
+    </div>
+  </section>
+
+  <!-- Seção Consequências -->
+  <section id="consequencias" class="py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8">Consequências do Desmatamento</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded shadow">
+          <h3 class="text-xl font-semibold mb-2">Mudanças Climáticas</h3>
+          <p>As florestas absorvem CO₂. Sua remoção aumenta os gases de efeito estufa, intensificando o aquecimento global.</p>
+        </div>
+        <div class="bg-white p-6 rounded shadow">
+          <h3 class="text-xl font-semibold mb-2">Perda de Biodiversidade</h3>
+          <p>O desmatamento destrói habitats, levando à extinção de espécies animais e vegetais essenciais para os ecossistemas.</p>
+        </div>
+        <div class="bg-white p-6 rounded shadow">
+          <h3 class="text-xl font-semibold mb-2">Impactos nas Comunidades</h3>
+          <p>Povos indígenas e comunidades locais perdem recursos naturais vitais para sua sobrevivência e cultura.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção Vídeo -->
+  <section id="video" class="bg-gray-200 py-16">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-8">Vídeo Educativo</h2>
+      <p class="mb-6">Assista ao vídeo abaixo para entender mais sobre o desmatamento e suas consequências:</p>
+      <!-- Exemplo com vídeo do YouTube (substitua o ID do vídeo pelo desejado) -->
+      <div class="max-w-3xl mx-auto">
+        <iframe width="100%" height="400" src="https://www.youtube.com/embed/JzCNoq3kK7I" title="Vídeo sobre desmatamento" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção Contato -->
+  <section id="contato" class="py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8">Entre em Contato</h2>
+      <div class="max-w-lg mx-auto bg-white p-8 rounded shadow">
+        <div id="contactForm">
+          <div class="mb-4">
+            <label for="name" class="block text-sm font-medium">Nome</label>
+            <input type="text" id="name" class="w-full p-2 border rounded" required>
+          </div>
+          <div class="mb-4">
+            <label for="email" class="block text-sm font-medium">E-mail</label>
+            <input type="email" id="email" class="w-full p-2 border rounded" required>
+          </div>
+          <div class="mb-4">
+            <label for="message" class="block text-sm font-medium">Mensagem</label>
+            <textarea id="message" class="w-full p-2 border rounded" rows="4" required></textarea>
+          </div>
+          <button onclick="submitForm()" class="bg-green-600 text-white px-6 py-3 rounded hover:bg-green-700">Enviar</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="bg-green-800 text-white p-4">
+    <div class="container mx-auto text-center">
+      <p>© 2025 Desmatamento e Suas Consequências. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    function submitForm() {
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+
+      if (name && email && message) {
+        alert('Mensagem enviada com sucesso! (Funcionalidade de envio não implementada neste exemplo)');
+        document.getElementById('contactForm').reset();
+      } else {
+        alert('Por favor, preencha todos os campos.');
+      }
+    }
+  </script>
+</body>
+</html>
